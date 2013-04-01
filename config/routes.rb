@@ -1,4 +1,11 @@
 Bogofy::Application.routes.draw do
+  
+
+  resources :lists do
+    resources :items
+  end
+  resources :items
+
   root to: 'pages#home'
 
   # The priority is based upon order of creation:

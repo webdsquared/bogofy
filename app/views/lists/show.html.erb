@@ -1,0 +1,15 @@
+<div class="container">
+<h3><%= @list.name %></h3>
+
+<%= form_for [@list, @list.items.build], html: { class: "form-inline" } do |f| %>
+	<%= f.text_field :name, placeholder: "Add an item..." %>
+	<%= f.submit "Add Item", class: "btn" %>
+<% end %>
+
+<div id="item-list">
+	<% if @item_list.present? %>
+		<%= render 'item_list' %>
+	<% end %>
+</div>
+
+

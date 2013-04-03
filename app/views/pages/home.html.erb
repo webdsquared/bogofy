@@ -1,1 +1,60 @@
-This is my home page!
+<%= render 'partials/header' %>
+<div class="slider-container">
+	<div class="container-narrow">
+		<div class="row-fluid">
+			<div class="span6">
+				<div class="hm-text-container">
+					<p class="welcome">Welcome to <span class="green-text">Bogo</span>fy</p>
+					<p class="welcome-sub-text">The online app that allows you to track your savings, create shopping lists, and connect with others, all in one place.</p>
+					<br>
+					<%= link_to "Learn More", '#', class: "btn btn-large btn-custom" %>
+				</div>
+			</div>
+			<div class="span6">
+				<div class="img-container">
+					<%= image_tag "laptop.png" %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container-narrow">
+	<div class="hm-bottom">
+	<blockquote>
+		<div class="row-fluid">
+			<div class="span9">
+				<p class="blockquote-large">Get started now by signing up for a FREE account!</p>
+				<p class="blockquote-small">Sign up with facebook and connect with other members to share tips and deals.</p>
+			</div>
+			<div class="span3 pad10">
+				<%= link_to "Signup Now", "#", class: "btn btn-large pull-right btn-custom" %>
+			</div>
+	</blockquote>
+	<div class="row-fluid">
+		<div class="span3">
+			<p class="subhead">Create Grocery Lists</p>
+			<p>Lorem ipsum dolor sit amet, ipsum homero dissentiunt mei et, ex consul maiorum sed. Adhuc mucius platonem in sit. Te honestatis liberavisse nec. Id duo nominavi eligendi, eu choro iudico munere mei.</p>
+			<%= link_to "More Info", "#", class: "btn btn-small btn-custom" %>
+		</div>
+		<div class="span3">
+			<p class="subhead">Track Transactions</p>
+			<p>Lorem ipsum dolor sit amet, ipsum homero dissentiunt mei et, ex consul maiorum sed. Adhuc mucius platonem in sit. Te honestatis liberavisse nec. Id duo nominavi eligendi, eu choro iudico munere mei.</p>
+			<%= link_to "More Info", "#", class: "btn btn-small btn-custom" %>
+		</div>
+		<div class="span3">
+			<p class="subhead">Organize Links</p>
+			<p>Lorem ipsum dolor sit amet, ipsum homero dissentiunt mei et, ex consul maiorum sed. Adhuc mucius platonem in sit. Te honestatis liberavisse nec. Id duo nominavi eligendi, eu choro iudico munere mei.</p>
+			<%= link_to "More Info", "#", class: "btn btn-small btn-custom" %>
+		</div>
+		<div class="span3">
+			<p class="subhead">Get Social</p>
+			<p>Lorem ipsum dolor sit amet, ipsum homero dissentiunt mei et, ex consul maiorum sed. Adhuc mucius platonem in sit. Te honestatis liberavisse nec. Id duo nominavi eligendi, eu choro iudico munere mei.</p>
+			<%= link_to "More Info", "#", class: "btn btn-small btn-custom" %>
+		</div>
+	</div>
+	</div>
+</div>
+<%= render 'partials/footer' %>
+<%= render 'partials/subfooter' %>
+
+

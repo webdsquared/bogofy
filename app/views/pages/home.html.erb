@@ -1,3 +1,6 @@
+<% if user_signed_in? %>
+<h1>Someone is signed in!</h1>
+<% end %>
 <%= render 'partials/header' %>
 <div class="slider-container">
 	<div class="container-narrow">
@@ -5,9 +8,9 @@
 			<div class="span6">
 				<div class="hm-text-container">
 					<p class="welcome">Welcome to <span class="green-text">Bogo</span>fy</p>
-					<p class="welcome-sub-text">The online app that allows you to track your savings, create shopping lists, and connect with others, all in one place.</p>
+					<p class="welcome-sub-text">The online app for couponers that allows you to track your savings, create shopping lists, and connect with other couponers, all in one place.</p>
 					<br>
-					<%= link_to "Learn More", '#', class: "btn btn-large btn-custom" %>
+					<%= link_to "Take a Tour", '#', class: "btn btn-large btn-custom" %>
 				</div>
 			</div>
 			<div class="span6">
@@ -34,22 +37,22 @@
 		<div class="span3">
 			<p class="subhead">Create Grocery Lists</p>
 			<p>Lorem ipsum dolor sit amet, ipsum homero dissentiunt mei et, ex consul maiorum sed. Adhuc mucius platonem in sit. Te honestatis liberavisse nec. Id duo nominavi eligendi, eu choro iudico munere mei.</p>
-			<%= link_to "More Info", "#", class: "btn btn-small btn-custom" %>
+			<%= link_to "More Info", "#" %>
 		</div>
 		<div class="span3">
 			<p class="subhead">Track Transactions</p>
 			<p>Lorem ipsum dolor sit amet, ipsum homero dissentiunt mei et, ex consul maiorum sed. Adhuc mucius platonem in sit. Te honestatis liberavisse nec. Id duo nominavi eligendi, eu choro iudico munere mei.</p>
-			<%= link_to "More Info", "#", class: "btn btn-small btn-custom" %>
+			<%= link_to "More Info", "#" %>
 		</div>
 		<div class="span3">
 			<p class="subhead">Organize Links</p>
 			<p>Lorem ipsum dolor sit amet, ipsum homero dissentiunt mei et, ex consul maiorum sed. Adhuc mucius platonem in sit. Te honestatis liberavisse nec. Id duo nominavi eligendi, eu choro iudico munere mei.</p>
-			<%= link_to "More Info", "#", class: "btn btn-small btn-custom" %>
+			<%= link_to "More Info", "#" %>
 		</div>
 		<div class="span3">
 			<p class="subhead">Get Social</p>
 			<p>Lorem ipsum dolor sit amet, ipsum homero dissentiunt mei et, ex consul maiorum sed. Adhuc mucius platonem in sit. Te honestatis liberavisse nec. Id duo nominavi eligendi, eu choro iudico munere mei.</p>
-			<%= link_to "More Info", "#", class: "btn btn-small btn-custom" %>
+			<%= link_to "More Info", "#" %>
 		</div>
 	</div>
 	</div>

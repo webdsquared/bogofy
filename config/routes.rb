@@ -12,6 +12,14 @@ Bogofy::Application.routes.draw do
 
   root to: 'pages#home'
 
+  match 'take-a-tour', to: 'pages#tour', as: 'tour'
+  get 'pages/tour'
+
+  match 'sign-up', to: 'pages#signup', as: 'signup'
+  get 'pages/signup'
+
+  match 'login', to: 'pages#login', as: 'login'
+  get 'pages/login'
   resources :identities
 
   # The priority is based upon order of creation:

@@ -2,13 +2,13 @@
 	<div class="masthead pad20">
 		<div class="navbar">
     	<ul class="nav pull-right">
-      	<li><a href="#">Home</a></li>
-      	<li><a href="#">About</a></li>
+      	<li><%= link_to "Home", root_path %></li>
+      	<li><%= link_to "Take a Tour", tour_path %></li>
     		<li><a href="#">Blog</a></li>
-    		<li><a href="#">Signup</a></li>
-    		<li><a href="#">Login</a></li>
+        <li><%= link_to "Sign Up", signup_path %></li>
+        <li><%= link_to "Login", login_path %></li>
     	</ul>
-    	<h3 class="green">Bogo<span class="black-text">fy</span></h3>
+    	<h3 class="green">Bogo<span class="grey-text">fy</span></h3>
   	</div>
 	</div>
 </div>

@@ -15,7 +15,7 @@ Bogofy::Application.routes.draw do
   match 'take-a-tour', to: 'pages#tour', as: 'tour'
   get 'pages/tour'
 
-  match 'sign-up', to: 'pages#signup', as: 'signup'
+  match 'sign-up', to: 'identities#new', as: 'signup'
   get 'pages/signup'
 
   match 'login', to: 'pages#login', as: 'login'

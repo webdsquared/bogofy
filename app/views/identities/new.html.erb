@@ -1,0 +1,37 @@
+<%= render 'partials/header' %>
+
+<div class="signin-pg">
+	<div class="container-narrow">
+		<div class="signin-container">
+			<p class="signin-heading">Sign Up for <span class="green-text">Bogo</span>fy</p>
+			
+			<div class="row-fluid">
+				<div class="span6">
+			<%= form_tag "/auth/identity/register", class: "form-login", autocomplete: "off" do %>
+				<label>Name</label>
+				<%= text_field_tag :name, @identity.try(:name) %><br>
+				<label>Email</label>
+				<%= text_field_tag :email, @identity.try(:email) %><br>
+				<label>Password</label>
+				<%=  password_field_tag :password %><br>
+				<label>Password Confirmation</label>
+				<%= password_field_tag :password_confirmation %><br>
+				<br>
+				<%= submit_tag "Sign Up", class: "btn btn-custom" %>
+			<% end %>
+				</div>
+				<div class="span6">
+					<div class="facebook-signup">
+						<h2 class="fb">Or sign up using Facebook!</h2>
+						<p class="fbimage"><%= link_to (image_tag "facebook.png"), "/auth/facebook" %></p>
+					</div>
+				</div>
+			</div>
+
+
+		</div>	
+	</div>
+</div>
+
+<%= render 'partials/footer' %>
+<%= render 'partials/subfooter' %>

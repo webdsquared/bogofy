@@ -1,26 +1,28 @@
-<div class="container-narrow">
-	
-	<p class="login-heading"><span class="green-text">Bogo</span><span class="grey-text">fy</span></p>
-
-	<div class="form-container">
-		<%= form_tag "auth/identity/callback", class: "form-login", autocomplete: "off" do %>
-			<label>Email</label>
-			<%= text_field_tag :auth_key, nil %><br>
-			<label>Password</label>
-			<%= password_field_tag :password, nil %><br>
+<p class="login-heading"><span class="green-text">Bogo</span><span class="grey-text">fy</span></p>
+<div class="signup-container">
+	<div class="signup-form">
+		<%= form_tag "auth/identity/callback", autocomplete: "off" do %>
+		<label>Email</label>
+		<%= text_field_tag :auth_key, nil, class: "input-block-level" %><br>
+		<label>Password</label>
+		<%= password_field_tag :password, nil, class: "input-block-level" %><br>
 			
 
-			<!-- Add Remember Me Functionality -->
+		<!-- Add Remember Me Functionality -->
 
 
-			<label class="checkbox">
-      	<input type="checkbox"> Remember me | <%= link_to "Login using Facebook", "/auth/facebook" %>
-    	</label>
-			<br>
-			<%= submit_tag "Login", class: "btn btn-custom" %>
+		<label class="checkbox">
+    <input type="checkbox"> Remember me | <%= link_to "Login using Facebook", "/auth/facebook" %>
+    </label>
+		<br>
+		<%= submit_tag "    Login    ", class: "btn btn-custom" %>
 
 		<% end %>
+	
+	
 	</div>
+</div>
+
 	<p class="form-links">
 		<%= link_to "Home", root_path %> |
 		<%= link_to "Privacy Policy", '#' %> |
@@ -30,5 +32,3 @@
 	</p>
 	<p class="form-copyright">Copyright &copy; <%= Time.now.strftime("%Y") %> WebDSquared</p>
 
-	
-</div>

@@ -1,5 +1,8 @@
 Bogofy::Application.routes.draw do
-  
+
+  match 'dashboard', to: 'dashboard#index', as: 'dashboard'  
+  get "dashboard/index"
+
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'  

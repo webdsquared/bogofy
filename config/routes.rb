@@ -1,5 +1,6 @@
 Bogofy::Application.routes.draw do
 
+
   match 'dashboard', to: 'dashboard#index', as: 'dashboard'  
   get "dashboard/index"
 
@@ -11,6 +12,8 @@ Bogofy::Application.routes.draw do
     resources :items
   end
   resources :items
+
+
   resources :users
 
   root to: 'pages#home'

@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   		user.save!
   	end
   end
+
+  #def to_param
+  #  "#{:id} - #{current_user.name}"
+  #end
 end

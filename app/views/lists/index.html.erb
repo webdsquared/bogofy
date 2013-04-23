@@ -1,7 +1,10 @@
-<h2>My Lists</h2>
+<div class="container-narrow">
+	<h2>My Lists</h2>
 
 <% for list in @lists %>
   <p><%= link_to list.name, list %></p>
 <% end %>
 
 <%= link_to "Add List", new_list_path %>
+
+</div>

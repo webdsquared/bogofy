@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def check_sign_in
   	unless user_signed_in?
-  		redirect to root_path
+  		redirect_to root_path
   	end
   end
 

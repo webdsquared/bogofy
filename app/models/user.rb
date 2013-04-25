@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   #attr_accessible :name, :oauth_expires_at, :oauth_token, :provider, :uid
  
+  has_many :lists, dependent: :destroy
+
   extend FriendlyId
   friendly_id :name, use: :slugged
  

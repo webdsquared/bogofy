@@ -8,13 +8,14 @@ Bogofy::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'  
 
-  resources :lists do
-    resources :items
+ 
+
+  
+  resources :users do 
+    resources :lists do
+      resources :items
+    end
   end
-  resources :items
-
-
-  resources :users
 
   root to: 'pages#home'
 

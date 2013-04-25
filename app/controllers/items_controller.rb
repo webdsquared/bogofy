@@ -2,10 +2,11 @@ class ItemsController < ApplicationController
   
 
   def create
-    @list = List.find(params[:list_id])
+    @user = current_user
+    @list = @user.lists.find(params[:list_id])
     @item = @list.items.create(params[:item])
     respond_to do |format|
-      format.html { redirect_to list_path(@list) }
+      format.html { redirect_to user_list_path(@user, @list) }
       format.js
     end
   end

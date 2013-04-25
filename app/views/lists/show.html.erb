@@ -1,7 +1,8 @@
+<%= render "partials/dashboard_header" %>
 <div class="container-narrow">
 <h3><%= @list.name %></h3>
 
-<%= form_for [@list, @list.items.build], html: { class: "form-inline" } do |f| %>
+<%= form_for [@user, @list, @list.items.build], html: { class: "form-inline" } do |f| %>
 	<%= f.text_field :name, placeholder: "Add an item..." %>
 	<%= f.submit "Add Item", class: "btn" %>
 <% end %>

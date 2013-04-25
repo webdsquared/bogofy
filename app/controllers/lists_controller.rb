@@ -1,21 +1,28 @@
 class ListsController < ApplicationController
+  
+  before_filter :check_sign_in
+
   def index
-    @lists = List.all
+    @user = current_user
+    @lists = @user.lists.all
   end
 
   def show
-    @list = List.find(params[:id])
+    @user = current_user
+    @list = @user.lists.find(params[:id])
     @item_list = @list.items.all
   end
 
   def new
-    @list = List.new
+    @user = current_user
+    @list = @user.lists.new
   end
 
   def create
-    @list = List.new(params[:list])
+    @user = current_user
+    @list = @user.lists.create(params[:list])
     if @list.save
-      redirect_to @list, :notice => "Successfully created list."
+      redirect_to user_lists_path, :notice => "Successfully created list."
     else
       render :action => 'new'
     end
